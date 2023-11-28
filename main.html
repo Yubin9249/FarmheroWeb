@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farm Hero</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+
+  <body>
+    <div class="menu">
+      <nav class="mainMenu">
+        <!--상단메뉴-->
+        <ul class="mainMenu">
+          <!--로고 이미지-->
+            <img
+              id="logo_farmhero"
+              src="pic/LogoOfFarmhero.png"
+              alt="FarmHero Logo"
+              width="5%"
+              height="5%"
+            />
+          <!--로고 텍스트-->
+            <span class="logo-text">FarmHero</span>
+          </li>
+          <!--메뉴바 링크 텍스트-->
+          <li><a href="main.html">DashBoard</a></li>
+          <li><a href="lastdata.html">과거데이터</a></li>
+          <li><a href="https://chat.openai.com/chat">예측데이터</a></li>
+          <li><a href="https://weatherwidget.org/ko/">CCTV</a></li>
+          <li><a href="https://ovenapp.io/view/FG7J8BiXYDKoKFLjapLav7sWv3hzRqTC/">etc.</a></li>
+          </ul>
+        <a id="pull" href="#"></a>
+      </nav>
+    </div>
+    <!-- 날씨 위젯 -->
+    <section id="section">
+      <article id="weather_widget">
+        <div id="ww_86cfaf7b186cf" v='1.3' loc='auto' a='{"t":"horizontal","lang":"ko","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'><a href="https://weatherwidget.org/uk/" id="ww_86cfaf7b186cf_u" target="_blank">Безкоштовний інформер погоди на сайт</a></div><script async src="https://app1.weatherwidget.org/js/?id=ww_86cfaf7b186cf"></script>
+      </article>
+
+      <article id="date">
+        <!--달력 이미지-->
+        <img
+                id="Calendarimg"
+                src="pic/calender.png"
+                alt="Calendarimg"
+
+        />
+        <div id="current_date"></p>
+          <!--현재 날짜-->
+          <script>
+            date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            document.getElementById("current_date").innerHTML = year + "/" + month + "/" + day;
+          </script>
+        </div>
+      </article>
+    </section>
+
+    <section id="sensor">
+      <article id="sensor_value">
+        <!--온도계 이미지-->
+        <img
+                id="Temperatureimg"
+                src="pic/Temperature.png"
+                alt="Temperatureimg"
+        />
+        <!--습도 이미지-->
+        <img
+                id="Humidityimg"
+                src="pic/Humidity.png"
+                alt="Humidityimg"
+        />
+        <!--이산화탄소 이미지-->
+        <img
+                id="carbon_dioxideimg"
+                src="pic/carbon dioxide.png"
+                alt="carbon_dioxideimg"
+        />
+        <!--일사량 이미지-->
+        <img
+                id="solar_radiationimg"
+                src="pic/solar radiation.png"
+                alt="solar_radiationimg"
+        />
+        <!--토양 습도 이미지-->
+        <img
+                id="soil_humidityimg"
+                src="pic/soil humidity.png"
+                alt="soil_humidityimg"
+        />
+      </article>
+
+      <article id="feedback">
+        <div id="feedbacksec">
+          <!--피드백-->
+          <p>FeedBack</p>
+          <textarea type = "text" name = "feedbackbox" disabled cols="100" rows="10"/></textarea>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
